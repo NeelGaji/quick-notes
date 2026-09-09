@@ -1,0 +1,9 @@
+<article class="note" id="<%= dom_id note %>">
+  <h2><%= link_to note.title, note %></h2>
+  <p class="preview"><%= truncate(note.body, length: 140) %></p>
+  <div class="note-actions">
+    <%= link_to "View", note %>
+    <%= link_to "Edit", edit_note_path(note) %>
+    <%= button_to "Delete", note, method: :delete, class: "link-danger" %>
+  </div>
+</article>

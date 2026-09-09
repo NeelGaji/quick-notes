@@ -1,0 +1,15 @@
+<% content_for :title, "Quick Notes" %>
+
+<header class="page-head">
+  <h1>Quick Notes</h1>
+  <p class="subtitle">A simple place to save your notes.</p>
+  <%= link_to "+ New Note", new_note_path, class: "button" %>
+</header>
+
+<% if @notes.any? %>
+  <section class="notes">
+    <%= render @notes %>
+  </section>
+<% else %>
+  <p class="empty">No notes yet. Create your first one.</p>
+<% end %>

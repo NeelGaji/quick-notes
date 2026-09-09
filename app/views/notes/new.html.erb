@@ -1,0 +1,7 @@
+<% content_for :title, "New Note" %>
+
+<h1>New Note</h1>
+
+<%= render "form", note: @note %>
+
+<p><%= link_to "Back to Notes", notes_path, class: "button-plain" %></p>

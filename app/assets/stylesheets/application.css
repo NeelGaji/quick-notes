@@ -1,0 +1,108 @@
+:root {
+  --ink: #1f2430;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --accent: #2563eb;
+  --danger: #b91c1c;
+  --bg: #f7f8fa;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+.page-head { text-align: center; margin-bottom: 2rem; }
+.page-head h1 { margin: 0 0 .25rem; font-size: 2rem; }
+.subtitle { color: var(--muted); margin: 0 0 1.25rem; }
+
+h1 { font-size: 1.6rem; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.button, .button-plain {
+  display: inline-block;
+  padding: .55rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
+.button:hover { text-decoration: none; opacity: .92; }
+.button-plain { background: var(--card); color: var(--ink); border: 1px solid var(--line); }
+
+.notes { display: grid; gap: 1rem; }
+
+.note, .note-full {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+}
+.note h2 { margin: 0 0 .4rem; font-size: 1.15rem; }
+.preview { color: var(--muted); margin: 0 0 .9rem; }
+
+.note-actions, .actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.actions { margin-top: 1.5rem; }
+
+.note-full .body { margin-top: .5rem; }
+
+.link-danger button, button.link-danger {
+  background: none;
+  border: none;
+  color: var(--danger);
+  font: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+.link-danger button:hover { text-decoration: underline; }
+
+.field { margin-bottom: 1.1rem; display: flex; flex-direction: column; gap: .35rem; }
+.field label { font-weight: 600; }
+.field input, .field textarea {
+  width: 100%;
+  padding: .6rem .7rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+  background: var(--card);
+}
+.field input:focus, .field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, .15);
+}
+
+.errors {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: var(--danger);
+  border-radius: 8px;
+  padding: .5rem 1rem;
+  margin-bottom: 1.25rem;
+}
+.errors h2 { font-size: 1rem; margin: .3rem 0; }
+
+.flash {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  border-radius: 8px;
+  padding: .6rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.empty { color: var(--muted); text-align: center; padding: 2rem 0; }

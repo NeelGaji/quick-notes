@@ -1,0 +1,12 @@
+<% content_for :title, @note.title %>
+
+<article class="note-full">
+  <h1><%= @note.title %></h1>
+  <div class="body"><%= simple_format @note.body %></div>
+</article>
+
+<div class="actions">
+  <%= link_to "Edit", edit_note_path(@note), class: "button" %>
+  <%= link_to "Back to Notes", notes_path, class: "button-plain" %>
+  <%= button_to "Delete", @note, method: :delete, class: "link-danger" %>
+</div>
